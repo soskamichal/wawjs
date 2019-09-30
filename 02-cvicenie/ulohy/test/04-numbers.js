@@ -2,15 +2,15 @@ const assert = require("assert");
 describe("Exploratory tests - number datatype and api and Math", function() {
   it("division by zero", function() {
     let x = 10 / 0;
-    //assert(x===Infinity);
+    assert(x===Infinity);
     //assert(x===NaN);
-    assert.fail("choose one of the options");
+    // assert.fail("choose one of the options");
   });
   it("Number.MAX_SAFE_INTEGER", function() {
     let x = Number.MAX_SAFE_INTEGER;
-    //assert(x + 1 === x + 2);
-    //assert(x+1!==x+2);
-    assert.fail("choose one of the options");
+    assert(x + 1 === x + 2);
+    // assert(x+1!==x+2);
+    // assert.fail("choose one of the options");
   });
   /*
   TODO: play with operators and Math API 
