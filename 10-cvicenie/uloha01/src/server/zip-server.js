@@ -9,7 +9,7 @@ const storageDir = path.join(__dirname, 'data')
 const server = http.createServer()
 server.listen(8000, "localhost")
     .on("request", (req, res) => {
-        const storageFile = path.join(storageDir, `${new Date().getTime()}-${req.headers['file-name']}`)
+        const storageFile = path.join(storageDir, `${new Date().getTime()}-${req.headers['file-name'].replace(/^.*[\\\/]/, '')}`)
         pipeline(
             req,
             fs.createWriteStream(storageFile),
